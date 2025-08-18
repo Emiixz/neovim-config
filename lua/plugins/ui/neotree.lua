@@ -3,7 +3,7 @@ return {
 	branch = "v3.x",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
-		"nvim-tree/nvim-web-devicons", -- opcional, para ícones bonitos
+		"nvim-tree/nvim-web-devicons", -- opcional, para ícones 
 		"MunifTanjim/nui.nvim",
 	},
 	config = function()

@@ -4,6 +4,7 @@ return {
     dependencies = {
       "hrsh7th/cmp-nvim-lsp",
       "saadparwaiz1/cmp_luasnip",
+      "stevearc/conform.nvim",
     },
     config = function()
       local cmp = require("cmp")

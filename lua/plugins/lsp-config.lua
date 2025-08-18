@@ -16,6 +16,7 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
+    dependencies = {"stevearc/conform.nvim"},
 		lazy = false,
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -45,6 +46,10 @@ return {
 				capabilities = capabilities,
 			})
 
+      lspconfig.pyright.setup({
+        capabilities = capabilities,
+      })
+
 			-- OmniSharp com suporte estendido
 			local omnisharp_extended = require("omnisharp_extended")
 
@@ -60,6 +65,10 @@ return {
 				},
 			})
 
+
+      vim.diagnostic.open_float()
+      
+
 			-- Mapeamentos de teclas
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
@@ -71,4 +80,5 @@ return {
 		"Hoffs/omnisharp-extended-lsp.nvim",
 	},
 }
+
 
